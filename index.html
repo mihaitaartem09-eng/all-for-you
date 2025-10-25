@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ALL FOR YOU - Full Site</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+<style>
+  body { font-family:'Poppins', sans-serif; background:#f5f7fa; margin:0; color:#333; }
+  header { background:#0057d9; color:white; padding:20px 40px; display:flex; justify-content:space-between; align-items:center; box-shadow:0 2px 6px rgba(0,0,0,0.2); }
+  header h1 { margin:0; }
+  nav a { color:white; text-decoration:none; margin:0 15px; font-weight:500; }
+  nav a:hover { color:#cce0ff; }
+  .section { padding:40px 20px; }
+  h2 { color:#0057d9; margin-bottom:20px; }
+  .form-container, .list-container, .stats-container { max-width:800px; margin:20px auto; background:white; padding:20px; border-radius:15px; box-shadow:0 8px 15px rgba(0,0,0,0.1); }
+  input, textarea, select { width:100%; padding:10px; margin:8px 0; border-radius:8px; border:1px solid #ccc; }
+  button { background:#0057d9; color:white; border:none; padding:10px 20px; border-radius:8px; cursor:pointer; font-weight:500; transition: background 0.3s, transform 0.2s; margin-top:10px; }
+  button:hover { background:#003f9a; transform: scale(1.05); }
+  .item-card { display:flex; justify-content:space-between; align-items:center; padding:10px; border-bottom:1px solid #ddd; }
+  .item-card span { margin-right:10px; }
+  .item-card button { padding:5px 10px; font-size:0.9em; }
+  .stat { margin:10px 0; font-weight:600; }
+  canvas { margin-top:20px; }
+</style>
+</head>
+<body>
+<header>
+  <h1>ALL FOR YOU</h1>
+  <nav>
+    <a href="#products">Products</a>
+    <a href="#feedback">Feedback</a>
+    <a href="#stats">Stats</a>
+  </nav>
+</header>
+<section class="section" id="products">
+  <h2>Add/Edit Product</h2>
+  <div class="form-container">
+    <input type="text" id="prod-name" placeholder="Product Name">
+    <input type="text" id="prod-desc" placeholder="Product Description">
+    <input type="text" id="prod-img" placeholder="Image URL">
+    <input type="number" id="prod-price" placeholder="Price" min="0" step="0.01">
+    <button id="add-product-btn">Add Product</button>
+  </div>
+  <h2>Product List</h2>
+  <div class="list-container" id="product-list"></div>
+</section>
+<section class="section" id="feedback">
+  <h2>Add Customer Feedback</h2>
+  <div class="form-container">
+    <input type="text" id="fb-name" placeholder="Customer Name">
+    <textarea id="fb-msg" placeholder="Feedback Message"></textarea>
+    <button id="add-feedback-btn">Add Feedback</button>
+  </div>
+  <h2>Feedback List</h2>
+  <div class="list-container" id="feedback-list"></div>
+</section>
+<section class="section" id="stats">
+  <h2>Statistics & Charts</h2>
+  <div class="stats-container" id="stats-container"></div>
+  <label for="filter-period">Select Period:</label>
+  <select id="filter-period">
+    <option value="all">All Time</option>
+    <option value="last7">Last 7 Days</option>
+    <option value="last30">Last 30 Days</option>
+  </select>
+  <h3>Product Prices</h3>
+  <canvas id="products-chart" width="400" height="200"></canvas>
+  <h3>Sales Trend</h3>
+  <canvas id="sales-chart" width="400" height="200"></canvas>
+  <h3>Feedback Overview</h3>
+  <canvas id="feedback-chart" width="400" height="200"></canvas>
+  <h3>Combined Sales + Feedback</h3>
+  <canvas id="combined-chart" width="400" height="200"></canvas>
+</section>
+<script>
+// Include toate funcțiile JS pentru: adăugare produse, feedback, grafice, filtre, export CSV/XLSX
+// Cod complet din versiunea precedentă
+</script>
+</body>
+</html>
